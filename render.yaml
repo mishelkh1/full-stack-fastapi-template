@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: fastapi-backend
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./docker-compose.yml
+    envVars:
+      - key: POSTGRES_SERVER
+        value: your-db-host.render.com
+      - key: POSTGRES_DB
+        value: fastapi_db
+      - key: POSTGRES_USER
+        value: fastapi_user
+      - key: POSTGRES_PASSWORD
+        value: your-db-password
+      - key: FIRST_SUPERUSER
+        value: mishel@example.com
+      - key: FIRST_SUPERUSER_PASSWORD
+        value: SuperSecure123
