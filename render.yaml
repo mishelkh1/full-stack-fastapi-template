@@ -7,12 +7,12 @@ services:
     dockerfilePath: ./docker-compose.yml
     envVars:
       - key: POSTGRES_SERVER
-        value: your-db-host.render.com
+        value: postgresql://fastapi_user:t7hGoCuLvgUpv2p0Ct3FD2ruYmggwpmR@dpg-d2884ere5dus73faj3dg-a.oregon-postgres.render.com/fastapi_db_ph31
       - key: POSTGRES_DB
         value: fastapi_db
       - key: POSTGRES_USER
         value: fastapi_user
-      - key: POSTGRES_PASSWORD
+      - key: t7hGoCuLvgUpv2p0Ct3FD2ruYmggwpmR
         value: your-db-password
       - key: FIRST_SUPERUSER
         value: mishel@example.com
