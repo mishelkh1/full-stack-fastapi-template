@@ -4,16 +4,18 @@ services:
     env: docker
     plan: free
     region: oregon
-    dockerfilePath: ./docker-compose.yml
+    dockerfilePath: ./backend/Dockerfile
+    buildCommand: ""
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 80
     envVars:
       - key: POSTGRES_SERVER
-        value: postgresql://fastapi_user:t7hGoCuLvgUpv2p0Ct3FD2ruYmggwpmR@dpg-d2884ere5dus73faj3dg-a.oregon-postgres.render.com/fastapi_db_ph31
+        value: dpg-d2884ere5dus73faj3dg-a.oregon-postgres.render.com
       - key: POSTGRES_DB
         value: fastapi_db
       - key: POSTGRES_USER
         value: fastapi_user
-      - key: t7hGoCuLvgUpv2p0Ct3FD2ruYmggwpmR
-        value: your-db-password
+      - key: POSTGRES_PASSWORD
+        value: t7hGoCuLvgUpv2p0Ct3FD2ruYmggwpmR
       - key: FIRST_SUPERUSER
         value: mishel@example.com
       - key: FIRST_SUPERUSER_PASSWORD
