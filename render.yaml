@@ -5,8 +5,6 @@ services:
     plan: free
     region: oregon
     dockerfilePath: ./backend/Dockerfile
-    buildCommand: ""
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 80
     envVars:
       - key: POSTGRES_SERVER
         value: dpg-d2884ere5dus73faj3dg-a.oregon-postgres.render.com
